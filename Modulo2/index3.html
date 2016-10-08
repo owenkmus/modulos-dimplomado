@@ -6,13 +6,20 @@
 <body>
 <style type="text/css">
   body {
-    color: blue;
+    color: red;
      }
 </style>
 <header>
 	<div>
 		<h1>SOFTWARE PERSE</h1>
+		<style type="text/css">
+  			h1 {
+    			color: blue;
+     		}
+		</style>
 	</div>
+</header>
+<center>
 	<section>
 		<div>
 			<h2>Herramienta administrativa de gestion</h2>
@@ -21,6 +28,33 @@
 		<p align="left">Modulos basicos de gestion adimistrativa</p>
 		</article>
 	</section>
-</header>
+	<ul>
+	<style type="text/css">
+  			li {
+    			color: purple;
+     		}
+		</style>
+		<li type="circle" align="left">Comercial</li> 
+		<li type="circle" align="left">Proveedores</li>
+		<li type="circle" align="left">Tesoreria</li>
+		<li type="circle" align="left">Nomina</li>
+		<li type="circle" align="left">Presupuesto</li>
+		<li type="circle" align="left">Contabilidad</li>
+	</ul>
+</center>
+<footer>
+	<div id='oculto'>Este contenido se ocultara, si oprimes el boton ocultar</div>
+	<div id='mostrar'>Este contenido se ocultara, si oprimes el boton ocultar</div>
+	<script type="text/javascript">
+		function ocultar(){
+			document.getElementById('oculto').style.display = 'none';
+		}
+		function mostrar(){
+			document.getElementById('mostrar').style.display = 'block';
+		}
+	</script>
+	<input type="button" value="ocultar" onclick="ocultar()">
+	<input type="button" value="mostrar" onclick="mostrar()">
+</footer>
 </body>
 </html>
