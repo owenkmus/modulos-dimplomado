@@ -41,15 +41,6 @@ class Student implements Person{
 		return this.age;
 	};
 
-	setNid(nid: number): void{
-		this.nid = nid;
-	}
-	setName(name: string): void{
-		this.name = name;
-	}
-	setAge(age:number): void{
-		this.age = age;
-	}
 	getId(): number{
 		return this.id;
 	}
@@ -68,6 +59,15 @@ class Student implements Person{
 	}
 	setClassroom(classroom:number): void{
 		this.classroom = classroom;
+	}
+	setNid(nid: number): void{
+		this.nid = nid;
+	}
+	setName(name: string): void{
+		this.name = name;
+	}
+	setAge(age:number): void{
+		this.age = age;
 	}
 }
 
