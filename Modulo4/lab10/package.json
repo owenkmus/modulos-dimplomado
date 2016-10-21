@@ -1,6 +1,6 @@
 {
-  "name": "lab9",
-  "version": "0.1.6",
+  "name": "lab10",
+  "version": "0.1.7",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "lite": "lite-server",
