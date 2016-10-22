@@ -1,0 +1,26 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let ride of rides" 
+        (click)="onSelect(ride)"
+    >
+        <span>{{ride.id}}</span> {{ride.nombre | uppercase }} 
+    </li>
+</ul>
+
+<div *ngIf="selected">
+<hr />
+    <label>Nombre: </label><br />
+    <input [(ngModel)]="selected.nombre" placeholder="nombre"><br />
+    <label>Airport: </label><br />
+    <input [(ngModel)]="selected.airport" placeholder="airport"><br />
+    <label>App: </label><br />
+    <input [(ngModel)]="selected.pp" placeholder="pp"><br />
+    <label>Units: </label><br />
+    <input [(ngModel)]="selected.units" placeholder="units"><br />
+    <label>Festives: </label><br />
+    <input [(ngModel)]="selected.festives" placeholder="festives"><br />
+    <label>Default: </label><br />
+    <input [(ngModel)]="selected.defaults" placeholder="defaults"><br />
+    <label>Total: </label><br />
+    <h1>{{selected.total}}</h1><br />
+</div>
