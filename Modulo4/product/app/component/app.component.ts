@@ -1,52 +1,26 @@
-import { Component } from '@angular/core';
-
- export class Product {
- 	id: number;
- 	name: string;
- 	description: string;
- 	type: string;
- 	price: number;
- 	quantity: number;
- }
-
+import { Component, OnInit } from '@angular/core';
+import {Product} from '../model/product';
+import {ProductService} from '../service/product.service';
 @Component({
   selector: 'my-app',
-  templateUrl: 'app/templates/product.html'
+  templateUrl: 'app/templates/product.html',
+  providers: [ProductService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-	title: string = "Mis productos";
-	selected: Product;
-	products: Product[] = PRODUCTS;
+    constructor(private productService: ProductService){}
 
-	onSelect(product: Product) {
-		this.selected = product;
-	}
-}
+    title: string = "Mis productos";
+    selected: Product;
+    products: Product[];
 
-const PRODUCTS: Product[] = [
-    {
-        id: 1,
-        name: "Samsung galaxy 8",
-        description: "telefono que explota",
-        type: "smartphone",
-        price: 1500000,
-        quantity: 20
-    },
-    {
-        id: 2,
-        name: "Samsung galaxy 10",
-        description: "telefono que explota",
-        type: "smartphone",
-        price: 1500000,
-        quantity: 20
-    },
-    {
-        id: 3,
-        name: "Samsung galaxy 20",
-        description: "telefono que explota",
-        type: "smartphone",
-        price: 1500000,
-        quantity: 20
+    ngOnInit(){
+        this.productService.getProducts()
+        .then(products => this.products = products)
+        .catch(error => console.log(error));
     }
-];
+
+    onSelect(product: Product) {
+        this.selected = product;
+    }
+}
