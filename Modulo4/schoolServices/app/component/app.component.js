@@ -9,28 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var product_service_1 = require('../service/product.service');
+var student_service_1 = require('../service/student.service');
+var teacher_service_1 = require('../service/teacher.service');
 var AppComponent = (function () {
-    function AppComponent(productService) {
-        this.productService = productService;
-        this.title = "Mis productos";
+    function AppComponent(studentService, teacherService) {
+        this.studentService = studentService;
+        this.teacherService = teacherService;
+        this.title = "Estudiantes";
+        this.title2 = "Profesores";
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.productService.getProducts()
-            .then(function (products) { return _this.products = products; })
+        this.studentService.getStudents()
+            .then(function (students) { return _this.students = students; })
+            .catch(function (error) { return console.log(error); });
+        this.teacherService.getTeachers()
+            .then(function (teachers) { return _this.teachers = teachers; })
             .catch(function (error) { return console.log(error); });
     };
-    AppComponent.prototype.onSelect = function (product) {
-        this.selected = product;
+    AppComponent.prototype.onSelect = function (student) {
+        this.selected = student;
+    };
+    AppComponent.prototype.onSelectTeacher = function (teacher) {
+        this.selected1 = teacher;
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: 'app/templates/product.html',
-            providers: [product_service_1.ProductService]
+            templateUrl: 'app/templates/school.html',
+            providers: [student_service_1.StudentService, teacher_service_1.TeacherService]
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService])
+        __metadata('design:paramtypes', [student_service_1.StudentService, teacher_service_1.TeacherService])
     ], AppComponent);
     return AppComponent;
 }());
