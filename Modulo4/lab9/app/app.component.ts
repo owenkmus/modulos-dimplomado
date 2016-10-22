@@ -11,14 +11,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: '<h1>{{product.id}}</h1><br />' + 
-  			'<h2>{{product.name}}</h2><br />' +
-  			'<h2>{{product.description}}</h2><br />' +
-  			'<h2>{{product.type}}</h2><br />' +
-  			'<h2>{{product.price}}</h2><br />' +
-  			'<h2>{{product.quantity}}</h2><br />'
+  templateUrl: 'app/templates/product.html'
 })
 export class AppComponent {
+
+	title = "Mi producto";
 	product: Product = {
 		id: 1,
 		name: "Galax7 7",
