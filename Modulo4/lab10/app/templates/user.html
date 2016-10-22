@@ -1,14 +1,6 @@
-<h1>{{user.id}}</h1><br />
-<h2>{{user.name}}</h2><br />
-<h2>{{user.address}}</h2><br />
-<h2>{{user.phone}}</h2><br />
-
-<div>
-	<hr />
-	<label for="">Name: </label><br />
-	<input type="text" [(ngModel)]="user.name" placeholder="Nombre"><br />
-	<label>Address: </label><br />
-    <textarea [(ngModel)]="user.address" placeholder="Direccion"></textarea><br />
-    <label>Phone: </label><br />
-    <input [(ngModel)]="user.phone" placeholder="Telefono"><br />
-</div>
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let user of users">
+        <span>{{user.id}}</span> {{user.name | uppercase }} 
+    </li>
+</ul>

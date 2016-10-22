@@ -16,12 +16,32 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 	title = "Mi producto";
-	product: Product = {
-		id: 1,
-		name: "Galax7 7",
-		description: "Granada de mano",
-		type: "smartphone",
-		price: 500000,
-		quantity: 10
-	}
+	products: Product[] = PRODUCTS;
 }
+
+const PRODUCTS: Product[] = [
+    {
+        id: 1,
+        name: "Samsung galaxy 8",
+        description: "telefono que explota",
+        type: "smartphone",
+        price: 1500000,
+        quantity: 20
+    },
+    {
+        id: 2,
+        name: "Samsung galaxy 10",
+        description: "telefono que explota",
+        type: "smartphone",
+        price: 1500000,
+        quantity: 20
+    },
+    {
+        id: 3,
+        name: "Samsung galaxy 20",
+        description: "telefono que explota",
+        type: "smartphone",
+        price: 1500000,
+        quantity: 20
+    }
+];

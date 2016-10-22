@@ -17,12 +17,8 @@ var User = (function () {
 exports.User = User;
 var AppComponent = (function () {
     function AppComponent() {
-        this.user = {
-            id: 2,
-            name: "Cristian",
-            address: "Av falsa 123",
-            phone: 3008142457
-        };
+        this.title = "Usuarios";
+        this.users = USERS;
     }
     AppComponent = __decorate([
         core_1.Component({
@@ -34,4 +30,24 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+var USERS = [
+    {
+        id: 1,
+        name: "Cristian",
+        address: "Av falsa 123",
+        phone: 3008124572
+    },
+    {
+        id: 2,
+        name: "Camilo",
+        address: "Calle 3 No. 48",
+        phone: 3135824697
+    },
+    {
+        id: 3,
+        name: "Ricardo",
+        address: "Cra 102 # 141 - 34",
+        phone: 3165879685
+    }
+];
 //# sourceMappingURL=app.component.js.map

@@ -12,10 +12,28 @@ import { Component } from '@angular/core';
   templateUrl: 'app/templates/user.html'
 })
 export class AppComponent {
-	user: User = {
-		id: 2,
-		name: "Cristian",
-		address: "Av falsa 123",
-		phone: 3008142457
-	}
+	
+	title = "Usuarios";
+	users: User[] = USERS;
 }
+
+const USERS: User[] = [
+    {
+        id: 1,
+        name: "Cristian",
+        address: "Av falsa 123",
+        phone: 3008124572
+    },
+    {
+        id: 2,
+        name: "Camilo",
+        address: "Calle 3 No. 48",
+        phone: 3135824697
+    },
+    {
+        id: 3,
+        name: "Ricardo",
+        address: "Cra 102 # 141 - 34",
+        phone: 3165879685
+    }
+];

@@ -18,14 +18,7 @@ exports.Product = Product;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = "Mi producto";
-        this.product = {
-            id: 1,
-            name: "Galax7 7",
-            description: "Granada de mano",
-            type: "smartphone",
-            price: 500000,
-            quantity: 10
-        };
+        this.products = PRODUCTS;
     }
     AppComponent = __decorate([
         core_1.Component({
@@ -37,4 +30,30 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+var PRODUCTS = [
+    {
+        id: 1,
+        name: "Samsung galaxy 8",
+        description: "telefono que explota",
+        type: "smartphone",
+        price: 1500000,
+        quantity: 20
+    },
+    {
+        id: 2,
+        name: "Samsung galaxy 10",
+        description: "telefono que explota",
+        type: "smartphone",
+        price: 1500000,
+        quantity: 20
+    },
+    {
+        id: 3,
+        name: "Samsung galaxy 20",
+        description: "telefono que explota",
+        type: "smartphone",
+        price: 1500000,
+        quantity: 20
+    }
+];
 //# sourceMappingURL=app.component.js.map
