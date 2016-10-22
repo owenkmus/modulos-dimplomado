@@ -42,9 +42,9 @@ var RIDES = [
         airport: 3900,
         pp: 700,
         festives: 1900,
-        units: this.units,
-        defaults: this.defaults,
-        total: ((this.airport + this.app + this.festives + this.units + this.defaults))
+        units: this.Ride.units,
+        defaults: this.Ride.defaults,
+        total: ((this.airport + this.pp + this.festives + this.units + this.defaults))
     },
     {
         id: 2,
@@ -52,8 +52,8 @@ var RIDES = [
         airport: 0,
         pp: 0,
         festives: 1900,
-        units: this.units,
-        defaults: this.defaults,
+        units: 50,
+        defaults: 4100,
         total: ((this.airport + this.app + this.festives + this.units + this.defaults))
     },
     {

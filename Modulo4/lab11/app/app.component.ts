@@ -27,6 +27,7 @@ export class AppComponent {
 }
 
 const RIDES: Ride[] = [
+
     {
         id: 1,
         nombre: "Aeropuerto",
@@ -35,7 +36,7 @@ const RIDES: Ride[] = [
         festives: 1900,
         units: this.units,
         defaults: this.defaults,
-        total: ((this.airport + this.app + this.festives + this.units + this.defaults))
+        total: ((this.airport+this.pp+this.festives+this.units+this.defaults))
              
     },
     {
@@ -44,8 +45,8 @@ const RIDES: Ride[] = [
         airport: 0,
         pp: 0,
         festives: 1900,
-        units: this.units,
-        defaults: this.defaults,
+        units: 50,
+        defaults: 4100,
         total: ((this.airport + this.app + this.festives + this.units + this.defaults))
 
     },
@@ -62,5 +63,3 @@ const RIDES: Ride[] = [
     }
     
 ];
-
-
