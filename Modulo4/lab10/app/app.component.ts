@@ -14,7 +14,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
 	
 	title = "Usuarios";
+	selected: User;
 	users: User[] = USERS;
+
+	onSelect(user: User) {
+		this.selected = user;
+	}
 }
 
 const USERS: User[] = [

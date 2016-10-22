@@ -17,9 +17,12 @@ var Product = (function () {
 exports.Product = Product;
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = "Mi producto";
+        this.title = "Mis productos";
         this.products = PRODUCTS;
     }
+    AppComponent.prototype.onSelect = function (product) {
+        this.selected = product;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',

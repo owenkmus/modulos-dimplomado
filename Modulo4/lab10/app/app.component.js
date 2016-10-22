@@ -20,6 +20,9 @@ var AppComponent = (function () {
         this.title = "Usuarios";
         this.users = USERS;
     }
+    AppComponent.prototype.onSelect = function (user) {
+        this.selected = user;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',

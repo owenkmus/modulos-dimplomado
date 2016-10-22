@@ -15,8 +15,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-	title = "Mi producto";
+	title: string = "Mis productos";
+	selected: Product;
 	products: Product[] = PRODUCTS;
+
+	onSelect(product: Product) {
+		this.selected = product;
+	}
 }
 
 const PRODUCTS: Product[] = [
