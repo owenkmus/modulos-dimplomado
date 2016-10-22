@@ -9,10 +9,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: '<h1>{{user.id}}</h1><br />' + 
-  			'<h2>{{user.name}}</h2><br />' +
-  			'<h2>{{user.address}}</h2><br />' +
-  			'<h2>{{user.phone}}</h2><br />' 
+  templateUrl: 'app/templates/product.html'
 })
 export class AppComponent {
 	user: User = {

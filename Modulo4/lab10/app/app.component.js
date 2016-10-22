@@ -9,32 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Product = (function () {
-    function Product() {
+var User = (function () {
+    function User() {
     }
-    return Product;
+    return User;
 }());
-exports.Product = Product;
+exports.User = User;
 var AppComponent = (function () {
     function AppComponent() {
-        this.product = {
-            id: 1,
-            name: "Galax7 7",
-            description: "Granada de mano",
-            type: "smartphone",
-            price: 500000,
-            quantity: 10
+        this.user = {
+            id: 2,
+            name: "Cristian",
+            address: "Av falsa 123",
+            phone: 3008142457
         };
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>{{product.id}}</h1><br />' +
-                '<h2>{{product.name}}</h2><br />' +
-                '<h2>{{product.description}}</h2><br />' +
-                '<h2>{{product.type}}</h2><br />' +
-                '<h2>{{product.price}}</h2><br />' +
-                '<h2>{{product.quantity}}</h2><br />'
+            templateUrl: 'app/templates/product.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
