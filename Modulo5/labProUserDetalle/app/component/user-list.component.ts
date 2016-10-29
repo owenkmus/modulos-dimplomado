@@ -1,15 +1,37 @@
-import { Component, Input } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { User } from '../model/user';
-import { USERS } from '../mock/user-mock';
+import {UserService} from "../service/user.service";
+import {Router} from "@angular/router";
 
 @Component({
-  selector: 'user-app',
-  templateUrl: 'app/templates/user-list.html'
+    selector: 'user-list-app',
+    templateUrl: 'app/templates/user-list.html',
+    providers: [UserService]
 })
+export class UserListComponent implements OnInit {
+    title: string = "Usuarios";
 
-export class UserListComponent {
-	
-	title: 'Usuarios';
- 	users: User[] = USERS;
+    selectedUser: User;
 
+    users: User[];
+
+    constructor(private router: Router, private userService: UserService) {
+
+    }
+
+    getUser() {
+        this.userService.getUsers().then(users => this.users = users);
+    }
+
+    ngOnInit(): void {
+        this.getUser();
+    }
+
+    onSelectUser(user: User){
+        this.selectedUser = user;
+    }
+
+    gotoUserDetail(): void {
+        this.router.navigate(['user/detail/', this.selectedUser.id]);
+    }
 }
