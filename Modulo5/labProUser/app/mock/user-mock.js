@@ -1,5 +1,5 @@
-import {User} from '../model/user';
-export const USERS: User[] = [
+"use strict";
+exports.USERS = [
     {
         id: 1,
         name: "Cristian",
@@ -19,3 +19,4 @@ export const USERS: User[] = [
         phone: 3168759685
     }
 ];
+//# sourceMappingURL=user-mock.js.map

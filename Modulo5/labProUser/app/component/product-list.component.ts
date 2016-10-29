@@ -1,12 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Product } from '../model/product';
+import { PRODUCTS } from '../mock/product-mock';
 
 @Component({
-	selector: 'product-list',
-	templateUrl: 'app/templates/product-list.html'
+  selector: 'product-app',
+  templateUrl: 'app/templates/product-list.html'
 })
 
 export class ProductListComponent {
-	@Input()
-	product: Product;
+	
+	title: 'Mis productos';
+	products: Product[] = PRODUCTS;
+
 }
