@@ -18,7 +18,7 @@ var SalesInvoiceService = (function () {
     };
     SalesInvoiceService.prototype.getSalesInvoice = function (id) {
         return this.getSalesInvoices()
-            .then(function (sales) { return sales.find(function (sales) { return sales.id === id; }); });
+            .then(function (salesInvoice) { return salesInvoice.find(function (salesInvoice) { return salesInvoice.id === id; }); });
     };
     SalesInvoiceService = __decorate([
         core_1.Injectable(), 

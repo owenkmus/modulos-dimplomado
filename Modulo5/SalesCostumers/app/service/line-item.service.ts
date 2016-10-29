@@ -8,8 +8,8 @@ export class LineItemService{
         return Promise.resolve(LINEITEMS);
     }
 
-    getLineItem(id: number): Promise<LineItem> {
+    getLineItem(salesInvoiceId: number): Promise<LineItem> {
         return this.getLineItems()
-            .then(line => line.find(lineItem => lineItem.salesInvoiceId === id));
+            .then(lineItem => lineItem.find(lineItem => lineItem.salesInvoiceId === salesInvoiceId));
     }
 }

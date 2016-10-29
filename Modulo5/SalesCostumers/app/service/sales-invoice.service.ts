@@ -10,6 +10,6 @@ export class SalesInvoiceService{
 
     getSalesInvoice(id: number): Promise<SalesInvoice> {
         return this.getSalesInvoices()
-            .then(sales => sales.find(sales => sales.id === id));
+            .then(salesInvoice => salesInvoice.find(salesInvoice => salesInvoice.id === id));
     }
 }

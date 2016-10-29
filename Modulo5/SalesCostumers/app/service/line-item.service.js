@@ -16,9 +16,9 @@ var LineItemService = (function () {
     LineItemService.prototype.getLineItems = function () {
         return Promise.resolve(line_item_mock_1.LINEITEMS);
     };
-    LineItemService.prototype.getLineItem = function (id) {
+    LineItemService.prototype.getLineItem = function (salesInvoiceId) {
         return this.getLineItems()
-            .then(function (line) { return line.find(function (lineItem) { return lineItem.salesInvoiceId === id; }); });
+            .then(function (lineItem) { return lineItem.find(function (lineItem) { return lineItem.salesInvoiceId === salesInvoiceId; }); });
     };
     LineItemService = __decorate([
         core_1.Injectable(), 
