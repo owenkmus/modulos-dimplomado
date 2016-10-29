@@ -14,8 +14,6 @@ var forms_1 = require('@angular/forms');
 var app_component_1 = require('./component/app.component');
 var product_detail_component_1 = require('./component/product-detail.component');
 var http_1 = require("@angular/http");
-var angular2_in_memory_web_api_1 = require("angular2-in-memory-web-api");
-var in_memory_product_service_1 = require("./mock/in-memory-product.service");
 var product_service_1 = require("./service/product.service");
 var AppModule = (function () {
     function AppModule() {
@@ -26,7 +24,6 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_product_service_1.InMemoryProductService)
             ],
             declarations: [
                 app_component_1.AppComponent,

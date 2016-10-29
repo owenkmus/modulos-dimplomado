@@ -17,9 +17,9 @@ var ProductService = (function () {
         this.productsURI = 'app/products';
     }
     ProductService.prototype.getProducts = function () {
-        return this.http.get('http://localhost:3000/api/products')
+        return this.http.get('http://138.68.0.83:7070/api/v1/product/list')
             .toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     ProductService.prototype.handleError = function (error) {

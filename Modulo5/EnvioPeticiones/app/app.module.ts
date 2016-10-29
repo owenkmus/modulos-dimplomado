@@ -15,7 +15,7 @@ import {ProductService} from "./service/product.service";
       BrowserModule,
       FormsModule,
       HttpModule,
-      InMemoryWebApiModule.forRoot(InMemoryProductService)
+//      InMemoryWebApiModule.forRoot(InMemoryProductService)
   ],
   declarations: [
       AppComponent,

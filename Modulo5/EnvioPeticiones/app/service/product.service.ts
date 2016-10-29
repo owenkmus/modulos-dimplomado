@@ -11,9 +11,9 @@ export class ProductService {
     constructor(private http: Http) { }
 
     getProducts(): Promise<Product[]> {
-        return this.http.get('http://localhost:3000/api/products')
+        return this.http.get('http://138.68.0.83:7070/api/v1/product/list')
             .toPromise()
-            .then(response => response.json().data as Product[])
+            .then(response => response.json() as Product[])
             .catch(this.handleError);
     }
 
