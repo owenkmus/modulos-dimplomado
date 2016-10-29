@@ -1,0 +1,13 @@
+<h1>{{ title }}</h1>
+<div *ngIf="salesInvoice">
+    <hr />
+    <label>Id: </label><br />
+    <input [(ngModel)]="salesInvoice.id" placeholder="id"><br />
+    <label>CostumerId: </label><br />
+    <input [(ngModel)]="salesInvoice.costumerId" placeholder="costumerId"><br />
+    <label>InvoiceAmount: </label><br />
+    <textarea [(ngModel)]="salesInvoice.invoiceAmount" placeholder="invoiceAmount"></textarea><br />
+    <label>Tax: </label><br />
+    <input [(ngModel)]="salesInvoice.tax" placeholder="tax"><br />
+    
+</div>

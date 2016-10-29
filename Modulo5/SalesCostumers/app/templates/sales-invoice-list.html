@@ -1,0 +1,15 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let saleInvoice of saleInvoices"
+        [class.sales]="salesInvoice === selectedSales"
+        (click)="onSelectSales(salesInvoice)">
+        <span>{{salesInvoice.id}}</span> {{salesInvoice.invoiceAmount}}
+    </li>
+</ul>
+
+<div *ngIf="selectedSales">
+    <h2>
+        {{selectedSales.invoiceAmount | uppercase}} is my Sales
+    </h2>
+    <button (click)="gotoSalesDetail()">View Details</button>
+</div>

@@ -1,0 +1,15 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let lineItem of lineItems"
+        [class.linea]="lineItem === selectedLine"
+        (click)="onSelectLine(lineItem)">
+        <span>{{lineItem.salesInvoiceId}}</span> {{lineItem.lineNumber}}
+    </li>
+</ul>
+
+<div *ngIf="selectedLine">
+    <h2>
+        {{selectedLine.lineNumber | uppercase}} is my Line Item
+    </h2>
+    <button (click)="gotoLineDetail()">View Details</button>
+</div>

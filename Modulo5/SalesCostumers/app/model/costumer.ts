@@ -1,4 +1,4 @@
- export class Product {
+ export class Costumer {
  	id: number;
  	name: string;
  }

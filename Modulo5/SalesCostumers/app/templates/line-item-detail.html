@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+<div *ngIf="line">
+    <hr />
+    <label>LineItem: </label><br />
+    <input [(ngModel)]="line.salesInvoiceId" placeholder="salesInvoiceId"><br />
+    <label>LineNumber: </label><br />
+    <textarea [(ngModel)]="line.lineNumber" placeholder="lineNumber"></textarea><br />
+    <label>ProductId: </label><br />
+    <input [(ngModel)]="line.productId" placeholder="productId"><br />
+    <label>Price: </label><br />
+    <input [(ngModel)]="line.purchasePrice" placeholder="purchasePrice"><br />
+</div>
