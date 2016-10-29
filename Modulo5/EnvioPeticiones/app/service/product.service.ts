@@ -12,6 +12,7 @@ export class ProductService {
 
     getProducts(): Promise<Product[]> {
         return this.http.get('http://138.68.0.83:7070/api/v1/product/list')
+        //'http://localhost:3000/api/products'
             .toPromise()
             .then(response => response.json() as Product[])
             .catch(this.handleError);
