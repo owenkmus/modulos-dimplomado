@@ -16,6 +16,8 @@ ejercicio angular 2
 
 allow control allow origin // permitir conexion sin error
 
+ingresar a la pag de android oficial y descargar el sdk
+
 
 
 
@@ -26,8 +28,9 @@ allow control allow origin // permitir conexion sin error
 // npm install -g cordova ionic (global)
 
 cordova create labCordova com.app.primerapp "PruebaCordova"
-cordova plataform add andoird
-cordova plataform add browser
+cordova platform add android
+cordova platform rm android
+cordova platform add browser
 cordova build andorid
 cordova emulate android
 cordova run android
@@ -39,3 +42,8 @@ adb devices
 ionic run android --target=xxxx
 ionic serve --lab
 
+
+C:\Program Files\Java\jdk1.8.0_112
+C:\Program Files\Java\jdk1.7.0_79
+
+C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Autodesk\Alias2014\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\nodejs\
