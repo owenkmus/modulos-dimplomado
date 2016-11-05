@@ -11,17 +11,9 @@ ejercicio angular 2
 
 
 
-
-
-
 allow control allow origin // permitir conexion sin error
 
-ingresar a la pag de android oficial y descargar el sdk
-
-
-
-
-
+ingresar a la pag de android oficial y descargar el sdk y el java 1.8
 
 
 
@@ -35,12 +27,18 @@ cordova build andorid
 cordova emulate android
 cordova run android
 
-ionic start labCordova blank --ts --v2 --id com.app.primerapp --appname "Lab1"
+ionic start labionic blank --ts --v2 --id com.app.primerapp --appionic "PruebaIonic"
 ionic plataform add android
 ionic build android
 adb devices
 ionic run android --target=xxxx
 ionic serve --lab
+
+ionic start lab2 sidemenu
+ionic start lab3 tabs
+
+ionic g page page2
+ionic g provide page2 
 
 
 C:\Program Files\Java\jdk1.8.0_112
