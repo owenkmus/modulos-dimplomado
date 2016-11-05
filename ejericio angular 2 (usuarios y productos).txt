@@ -1,0 +1,38 @@
+ejercicio angular 2
+
+* creacion de usuario
+* creacion de producto
+* actualizacion de usuario
+* actualizacion de producto
+* lista de usuarios
+* lista de productos
+* creacion de servicios con observable
+* utilizar routes para usuarios y productos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// npm install -g cordova ionic (global)
+
+cordova create lab1 com.app.lab1 "Lab1"
+cordova plataform add andoird
+cordova plataform add browser
+cordova build andorid
+cordova emulate android
+cordova run android
+
+ionic start lab1 blank --ts --v2
+ionic plataform add android
+
+
