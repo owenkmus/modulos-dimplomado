@@ -14,7 +14,7 @@ ejercicio angular 2
 
 
 
-
+allow control allow origin // permitir conexion sin error
 
 
 
@@ -25,14 +25,17 @@ ejercicio angular 2
 
 // npm install -g cordova ionic (global)
 
-cordova create lab1 com.app.lab1 "Lab1"
+cordova create labCordova com.app.primerapp "PruebaCordova"
 cordova plataform add andoird
 cordova plataform add browser
 cordova build andorid
 cordova emulate android
 cordova run android
 
-ionic start lab1 blank --ts --v2
+ionic start labCordova blank --ts --v2 --id com.app.primerapp --appname "Lab1"
 ionic plataform add android
-
+ionic build android
+adb devices
+ionic run android --target=xxxx
+ionic serve --lab
 

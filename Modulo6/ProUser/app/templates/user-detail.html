@@ -1,0 +1,25 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let user of users"
+        [class.juan]="user === selectedUser"
+        (click)="onSelectUser(user)">
+        <span>{{user.id}}</span> {{user.firstname}}
+    </li>
+</ul>
+
+<div *ngIf="user">
+    <hr />
+    <label>Id: </label><br />
+    <input [(ngModel)]="user.id" placeholder="id"><br />
+    <label>Email: </label><br />
+    <input [(ngModel)]="user.email" placeholder="email"><br />
+    <label>Password: </label><br />
+    <textarea [(ngModel)]="user.password" placeholder="password"></textarea><br />
+    <label>First Name: </label><br />
+    <input [(ngModel)]="user.firstname" placeholder="firstname"><br />
+    <label>Last Name: </label><br />
+    <input [(ngModel)]="user.lastname" placeholder="lastname"><br />
+    <label>Phone: </label><br />
+    <input [(ngModel)]="user.phone" placeholder="phone"><br />
+    <button (click)="saveUser()">Save</button>
+</div>

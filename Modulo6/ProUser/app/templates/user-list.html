@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+
+<div>
+    <label>User firstname:</label> <input #userFirstname />
+    <button (click)="add(userFirstname.value); userFirstname.value=''">
+        Add
+    </button>
+</div>
+
+
+<hr />
+<ul>
+    <li *ngFor="let user of users"
+        [class.juan]="user === selectedUser"
+        (click)="onSelectUser(user)">
+        <span>{{user.id}}</span> {{user.firstname}}
+    </li>
+</ul>
+
+<button (click)="gotoUserDetail()">View Details</button>
+
+<user-detail [user]="selectedUser"></user-detail>
